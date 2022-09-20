@@ -7,10 +7,6 @@ export default function useBreedList(animal) {
     const [status, setStatus] = useState('unloaded');
 
     useEffect(() => {
-        alert(status);
-    }, [status]);
-
-    useEffect(() => {
         if (!animal) {
             setBreedList([]);
         } else if (localCache[animal]) {
